@@ -16,6 +16,7 @@ body {
 #container {
     width: 600px;
     height: 250px;
+    position: relative;
     /*debug*/
     background: yellow;
 }
@@ -28,4 +29,20 @@ img.cover {
 
 img.active {
     display: block;
+}
+
+#up {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    background-color: #141111c2;
+    border-radius: 50px;
+}
+
+#down {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background-color: #141111c2;
+    border-radius: 50px;
 }

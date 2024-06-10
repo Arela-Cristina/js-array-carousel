@@ -16,7 +16,47 @@ for (let i = 0; i < arrayCarousel.length; i++) {
     container.innerHTML += immagini;
 }
 
+let activeitem = 0;
+
 //selezionamo tutti gli elementi in pagina
-const immaginiContainer = document.getElementsByClassName('cover');
-immaginiContainer[4].classList.add('active');
+let immaginiContainer = document.getElementsByClassName('cover');
+immaginiContainer[0].classList.add('active');
 console.log(immaginiContainer[0]);
+
+//aggiungiamo eventi ai svg
+let upButton = document.getElementById('up');
+console.log('sono il chevron', upButton);
+
+
+//facciamo andare gli uno svg  tra altro, facendo  click
+upButton.addEventListener('click',
+    function () {
+        if (activeitem < immaginiContainer.length -1) {
+            immaginiContainer[activeitem].classList.remove('active');
+
+            activeitem++
+            console.log(immaginiContainer)
+
+            //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
+            immaginiContainer[activeitem].classList.add('active');
+        }
+    });
+
+    //aggiungiamo eventi ai svg
+let downButton = document.getElementById('down');
+console.log('sono il chevron', downButton);
+
+
+//facciamo andare gli uno svg  tra altro, facendo  click
+downButton.addEventListener('click',
+    function () {
+        if (activeitem > 0) {
+            immaginiContainer[activeitem].classList.remove('active');
+
+            activeitem--
+            console.log(immaginiContainer)
+
+            //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
+            immaginiContainer[activeitem].classList.add('active');
+        }
+    });

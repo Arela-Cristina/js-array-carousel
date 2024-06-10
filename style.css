@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     height: 100vh;
     display: flex;
@@ -35,14 +34,24 @@ img.active {
     position: absolute;
     top: 5%;
     left: 50%;
-    background-color: #141111c2;
+    background-color: #ffffffc2;
     border-radius: 50px;
+    font-size: 15px;
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-weight: bolder;
 }
 
 #down {
     position: absolute;
     bottom: 5%;
     left: 50%;
-    background-color: #141111c2;
+    background-color: #ffffffc2;
     border-radius: 50px;
+    font-size: 15px;
+    padding-bottom: 6px;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-weight: bolder;
 }
